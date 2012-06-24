@@ -10,7 +10,7 @@ The game begins with $1000 at your disposal.  No Thank You needed for the virtua
 
 Prerequisites
 ---------------------------------------------------------------------------
-Howse 33 was coded in Lua using the Corona SDK.   It is intended to be a sample and is not production ready code.   Corona Labs just released an unlimited free trial of their Corona SDK.
+Howse 33 was coded in Lua using the Corona SDK.   It is intended to be a sample and is not release ready code.   Corona Labs just released an unlimited free trial of their Corona SDK.
 
 All image files are included with the application.  If you decide to use this application, we recommend changing the name and images before commercial use.
 
