@@ -1,4 +1,4 @@
-Howse33 - Sample Card Game Built Using The Corona SDK
+Howse 33 - Sample Card Game Built Using The Corona SDK
 ==========================================================================
 
 Overview
