@@ -1,4 +1,3 @@
-
 -- Display Variables
 local deck
 local dealerCard1
@@ -76,8 +75,8 @@ function LoadIntro()
 	house.yScale = .9
 
 	-- Text Fade In Transition
-    transition.to( house, { time=0, delay=0, alpha=.0 } )
-    transition.to( house, { time=500, delay=0, alpha=1.0} )
+          transition.to( house, { time=0, delay=0, alpha=.0 } )
+          transition.to( house, { time=500, delay=0, alpha=1.0} )
 	
 	playButton    = display.newImage("Play.png")
 	playButton.x  = display.contentWidth / 2 - (playButton.contentWidth / 2)
@@ -147,6 +146,7 @@ function ShuffleCards()
   local count = 0
   local cardDeck = {}
 
+  -- 10 Is The Maximum Number Of Cards Needed Per Hand
   while (count <= 10) do
       local cardFound = false
 	  local cardValue = math.random(1, 51)
@@ -222,12 +222,12 @@ function DealCards()
    
     CheckBank()
     DisplayScore(score)
-	DisplayDealerScore("Dealer")
+    DisplayDealerScore("Dealer")
     DisplayBank(bank)	
-	DisplayBet(bet)
+    DisplayBet(bet)
 	
     cardCount   = 3
-	dealerCount = 3
+    dealerCount = 3
     endGame = false
 
 end
@@ -624,55 +624,55 @@ function GetCardImage(cardValue)
      elseif cardValue ==  26  then
        imgCard = "AceClubs.png"
      elseif cardValue ==  27  then
-		imgCard = "KingClubs.png"
-	elseif cardValue ==  28  then
-		imgCard = "QueenClubs.png"
-	elseif cardValue ==  29  then
-		imgCard = "JackClubs.png"
-	elseif cardValue ==  30  then
-		imgCard = "10Clubs.png"
-	elseif cardValue ==  31   then
-		imgCard = "9Clubs.png"
-	elseif cardValue ==  32  then
-		imgCard = "8Clubs.png"
-	elseif cardValue ==  33  then
-		imgCard = "7Clubs.png"
-	elseif cardValue ==  34  then
-		imgCard = "6Clubs.png"
-	elseif cardValue ==  35  then
-		imgCard = "5Clubs.png"
-	elseif cardValue ==  36  then
-		imgCard = "4Clubs.png"
-	elseif cardValue ==  37  then
-		imgCard = "3Clubs.png"
-	elseif cardValue ==  38  then
-		imgCard = "2Clubs.png"
-	elseif cardValue ==  39  then 
-		imgCard = "AceSpades.png"
-	elseif cardValue ==  40   then
-		imgCard = "KingSpades.png"
-	elseif cardValue ==  41  then
-		imgCard = "QueenSpades.png"
-	elseif cardValue ==  42   then
-		imgCard = "JackSpades.png"
-	elseif cardValue ==  43  then
-		imgCard = "10Spades.png" 
-	elseif cardValue ==  44  then
-		imgCard = "9Spades.png"
-	elseif cardValue ==  45  then
-		imgCard = "8Spades.png"
-	elseif cardValue ==  46 then
-		imgCard = "7Spades.png"
-	elseif cardValue ==  47  then
-		imgCard = "6Spades.png"
-	elseif cardValue ==  48  then
-		imgCard = "5Spades.png"
-	elseif cardValue ==  49  then
-		imgCard = "4Spades.png"
-	elseif cardValue ==  50  then
-		imgCard = "3Spades.png"
-	elseif cardValue ==  51  then
-		imgCard = "2Spades.png"
+	imgCard = "KingClubs.png"
+     elseif cardValue ==  28  then
+	imgCard = "QueenClubs.png"
+     elseif cardValue ==  29  then
+	imgCard = "JackClubs.png"
+     elseif cardValue ==  30  then
+	imgCard = "10Clubs.png"
+     elseif cardValue ==  31   then
+	imgCard = "9Clubs.png"
+     elseif cardValue ==  32  then
+	imgCard = "8Clubs.png"
+     elseif cardValue ==  33  then
+	imgCard = "7Clubs.png"
+     elseif cardValue ==  34  then
+	imgCard = "6Clubs.png"
+     elseif cardValue ==  35  then
+	imgCard = "5Clubs.png"
+     elseif cardValue ==  36  then
+	imgCard = "4Clubs.png"
+     elseif cardValue ==  37  then
+	imgCard = "3Clubs.png"
+     elseif cardValue ==  38  then
+	imgCard = "2Clubs.png"
+     elseif cardValue ==  39  then 
+	imgCard = "AceSpades.png"
+     elseif cardValue ==  40   then
+	imgCard = "KingSpades.png"
+     elseif cardValue ==  41  then
+	imgCard = "QueenSpades.png"
+     elseif cardValue ==  42   then
+	imgCard = "JackSpades.png"
+     elseif cardValue ==  43  then
+	imgCard = "10Spades.png" 
+     elseif cardValue ==  44  then
+	imgCard = "9Spades.png"
+     elseif cardValue ==  45  then
+	imgCard = "8Spades.png"
+     elseif cardValue ==  46 then
+	imgCard = "7Spades.png"
+     elseif cardValue ==  47  then
+	imgCard = "6Spades.png"
+     elseif cardValue ==  48  then
+	imgCard = "5Spades.png"
+     elseif cardValue ==  49  then
+	imgCard = "4Spades.png"
+     elseif cardValue ==  50  then
+	imgCard = "3Spades.png"
+    elseif cardValue ==  51  then
+ 	imgCard = "2Spades.png"
     end
 
      return imgCard
@@ -853,7 +853,7 @@ function onHit(event)
 	local t = event.target
 
 	local phase = event.phase
-    if "began" == phase then
+          if "began" == phase then
  	   Hit()
 	end
 end 
@@ -895,7 +895,7 @@ function onBack(event)
 		if "began" == phase then
 		   ruleText:removeSelf()
 		   backButton:removeSelf()
-           LoadIntro()
+                      LoadIntro()
 		end
 
 end 
@@ -974,7 +974,7 @@ function onFreeze(event)
 	local t = event.target
 
 	local phase = event.phase
-    if "began" == phase then
+          if "began" == phase then
  	   Freeze()
 	end
 end 
@@ -1012,7 +1012,7 @@ function LoadEventListeners()
 
 	-- Add Event Listeners
 	deck:addEventListener("touch", onHit)
-    fiveChip:addEventListener("touch", onBet5)
+          fiveChip:addEventListener("touch", onBet5)
 	tenChip:addEventListener("touch", onBet10)
 	tfChip:addEventListener("touch", onBet25)
 	fChip:addEventListener("touch", onBet50)
